@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Google Image Search</title>
+        <link href="style.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    </head>
+        <body>
+            <div class="top_links">
+                <a href="index.html">Back to Google Search</a>
+                <a href="google_advanced_search.html">Advanced Search</a>
+            </div>
+            <div class = "centered_google_logo">
+                <img src="./google_logo.png" alt="Google Logo">
+                <span class="google-images-text">images</span>
+            </div>
+            <div class="form-container">
+                <form action="https://www.google.com/search" method="get">
+                    <input type="hidden" name="tbm" value="isch">
+                    <div class="search-container">
+                        <i class="fa fa-search"></i>
+                        <input type="text" class="search-input" autofocus name="q">
+                        <i class="fa fa-microphone"></i>
+                        <i class="fa fa-camera"></i>
+                    </div>
+                    <br>
+                        <div class="two_buttons">
+                            <input type="submit" class="btn" value="Google Search"> 
+                        </div>
+                    </br>
+                </form>
+            </div>
+
+        </body>
+
+</html>
