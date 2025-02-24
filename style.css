@@ -27,6 +27,7 @@ body {
 
 .centered_google_logo {
     justify-content: center; 
+    flex-direction: column;
     display: flex;
     align-items: center;
     width: 100%;
@@ -65,6 +66,36 @@ body {
     margin: auto;
     padding: 30px;
     width: 600px;
+}
+
+.google-images-text {
+    font-size: 16px;
+    color: rgb(66, 133, 244);
+    font-family: Arial, sans-serif;
+    margin-left: 5.5cm;
+    margin-top: -0.35cm;
+    letter-spacing: 1px;
+}
+
+.top_links {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    display: flex;
+    gap: 15px;
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+
+}
+
+.top_links a {
+    color: white;
+    text-decoration: none;
+}
+
+.top_links a:hover {
+    text-decoration: underline;
 }
 
 .search-container {
