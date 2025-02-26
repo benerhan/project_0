@@ -20,36 +20,191 @@
                 Advanced Search
             </div>
             <div class="advanced-title-container">
-                    <div class="advanced-title-left">Find pages with...</div>
-                    <div class="advanced-title-right">To do this in the search box</div>
+                <div class="advanced-title-left">Find pages with...</div>
+                <div class="advanced-title-right">To do this in the search box</div>
             </div>
-            <div class="advanced-search-container">
-                  <form class="advanced-search-form" action="https://www.google.com/search">
-                        <label for="all-words">all these words:</label>
-                        <input type="text" id="all-words" name="as_q">
-                        <span class="description">Type the important words:&nbsp;<span class="advanced-search-white-text">  tri-colour rat terrier</span></span>
+            <div>
+                <form class="advanced-search-form" action="https://www.google.com/search">
+                    <input type="hidden" name="hl" value="en">
+                    <label for="all-words">all these words:</label>
+                    <input type="text" id="all-words" name="as_q">
+                    <span class="description">Type the important words:&nbsp;<span class="advanced-search-white-text">  tri-colour rat terrier</span></span>
 
-                        <label for="exact-word">this exact word or phrase:</label>
-                        <input type="text" id="exact-word" name="as_epq">
-                        <span class="description">Put exact words in quotes:&nbsp;<span class="advanced-search-white-text"> "rat terrier"</span></span>
+                    <label for="exact-word">this exact word or phrase:</label>
+                    <input type="text" id="exact-word" name="as_epq">
+                    <span class="description">Put exact words in quotes:&nbsp;<span class="advanced-search-white-text"> "rat terrier"</span></span>
 
-                        <label for="any-words">any of these words:</label>
-                        <input type="text" id="any-words" name="as_oq">
-                        <span class="description">Type &nbsp; <span class="advanced-search-white-text">OR</span>&nbsp; between all the words you want:&nbsp; <span class="advanced-search-white-text">miniature OR standard</span></span>
+                    <label for="any-words">any of these words:</label>
+                    <input type="text" id="any-words" name="as_oq">
+                    <span class="description">Type &nbsp; <span class="advanced-search-white-text">OR</span>&nbsp; between all the words you want:&nbsp; <span class="advanced-search-white-text">miniature OR standard</span></span>
 
-                        <label for="none-words">none of these words:</label>
-                        <input type="text" id="none-words" name="as_eq">
-                        <span class="description">Put a minus sign just before words that you don't want:<span class="advanced-search-white-text"> -rodent, -"Jack Russell"</span></span>
+                    <label for="none-words">none of these words:</label>
+                    <input type="text" id="none-words" name="as_eq">
+                    <span class="description">Put a minus sign just before words that you don't want:<span class="advanced-search-white-text"> -rodent, -"Jack Russell"</span></span>
 
-                        <label for="num-low">numbers raging from:</label>
-                        <div style="display: flex;">
-                            <input type="number" name="as-nlo" id="num-low" style="width: 45%;">
-                            <span style="margin: 0 5px;">to</span>
-                            <input type="number" name="as-nhi" id="num-high" style="width: 55%;">
-                        </div>
+                    <label for="num-low">numbers raging from:</label>
+
+                    <div style="display: flex;">
+                        <input type="number" name="as-nlo" id="num-low" style="width: 45%;">
+                        <span style="margin: 0 5px;">to</span>
+                        <input type="number" name="as-nhi" id="num-high" style="width: 55%;">
+                    </div>
                         <span class="description">Put two full stops between the number and add a unit of measurement:&nbsp;<span class="advanced-search-white-text"> 10..25kg, £300..£500, 2010..2011</span></span>
                         
-                        <input type="submit" value="Advanced Search">
+                    <div class="advanced-search-black-line"></div>
+
+                    <div class="advanced-title-left">Then narrow your <br>results by...</br></div>
+                        
+                    <label for="language">language:</label>
+                    <select class="custom-dropdown"  name="hl" id="language">
+                            <option value="any">any languages</option>
+                            <option value="af">Afrikaans</option>
+                            <option value="sq">Albanian</option>
+                            <option value="ar">Arabic</option>
+                            <option value="bn">Bengali</option>
+                            <option value="bs">Bosnian</option>
+                            <option value="ca">Catalan</option>
+                            <option value="hr">Croatian</option>
+                            <option value="cs">Czech</option>
+                            <option value="da">Danish</option>
+                            <option value="nl">Dutch</option>
+                            <option value="en">English</option>
+                            <option value="eo">Esperanto</option>
+                            <option value="et">Estonian</option>
+                            <option value="tl">Filipino</option>
+                            <option value="fi">Finnish</option>
+                            <option value="fr">French</option>
+                            <option value="de">German</option>
+                            <option value="el">Greek</option>
+                            <option value="hi">Hindi</option>
+                            <option value="hu">Hungarian</option>
+                            <option value="id">Indonesian</option>
+                            <option value="it">Italian</option>
+                            <option value="ja">Japanese</option>
+                            <option value="jw">Javanese</option>
+                            <option value="ko">Korean</option>
+                            <option value="la">Latin</option>
+                            <option value="mr">Marathi</option>
+                            <option value="pl">Polish</option>
+                            <option value="pt">Portuguese</option>
+                            <option value="ro">Romanian</option>
+                            <option value="ru">Russian</option>
+                            <option value="sr">Serbian</option>
+                            <option value="si">Sinhalese</option>
+                            <option value="es">Spanish</option>
+                            <option value="sw">Swahili</option>
+                            <option value="sv">Swedish</option>
+                            <option value="ta">Tamil</option>
+                            <option value="th">Thai</option>
+                            <option value="tr">Turkish</option>
+                            <option value="uk">Ukrainian</option>
+                            <option value="vi">Vietnamese</option>
+                    </select>
+                    <span class="description">Find pages in the language that you select.</span>
+
+                    <label for="region">region:</label>
+                    <select class="custom-dropdown" name="cr" id="region">
+                        <option value="any">any region</option>
+                        <option value="countryUS">United States</option>
+                        <option value="countryCA">Canada</option>
+                        <option value="countryGB">United Kingdom</option>
+                        <option value="countryAU">Australia</option>
+                        <option value="countryNZ">New Zealand</option>
+                        <option value="countryIE">Ireland</option>
+                        <option value="countryZA">South Africa</option>
+                        <option value="countryIN">India</option>
+                        <option value="countrySG">Singapore</option>
+                        <option value="countryPH">Philippines</option>
+                        <option value="countryMY">Malaysia</option>
+                        <option value="countryID">Indonesia</option>
+                        <option value="countryPK">Pakistan</option>
+                        <option value="countryBD">Bangladesh</option>
+                        <option value="countryLK">Sri Lanka</option>
+                        <option value="countryAE">United Arab Emirates</option>
+                        <option value="countrySA">Saudi Arabia</option>
+                        <option value="countryKW">Kuwait</option>
+                        <option value="countryQA">Qatar</option>
+                        <option value="countryOM">Oman</option>
+                        <option value="countryBH">Bahrain</option>
+                        <option value="countryJO">Jordan</option>
+                        <option value="countryLB">Lebanon</option>
+                        <option value="countrySY">Syria</option>
+                        <option value="countryIQ">Iraq</option>
+                        <option value="countryIR">Iran</option>
+                        <option value="countryTR">Turkey</option>
+                    </select>
+                    <span class="description">Find pages published in a particular region.</span>
+
+                    <label for="last_update">last update:</label>
+                    <select class="custom-dropdown" id="last_update" name="as_qdr">
+                        <option value="all">any time</option>
+                        <option value="d1">past 24hrs</option>
+                        <option value="d7">past week</option>
+                        <option value="d30">past month</option>
+                        <option value="y">past year</option>
+                    </select>
+                    <span class="description">Find pages updated within the time that you specify..</span>
+
+                    <label for="side_or_domain">site or domain:</label>
+                    <input type="text" id="site_or_domain" name="as_sitesearch">
+                    <span class="description">
+                        Search one site (like 
+                        <span class="advanced-search-white-text">wikipedia.org</span>) or limit your results to a domain like 
+                        <span class="advanced-search-white-text">.edu, .org or .gov</span>
+                      </span>
+                    
+                    <label for="terms">terms appearing:</label>
+                    <select class="custom-dropdown" id="terms-appearing" name="as_occt">
+                        <option value="any">anywhere in the page</option>
+                        <option value="title">in the title of the page</option>
+                        <option value="body">in the text of the page</option>
+                        <option value="url">in the URL of the page</option>
+                        <option value="link">in the links on the page</option>
+                    </select>
+                    <span class="description">Search for terms in the whole page, page title or web address, or links to the page you're looking for.</span>
+                    
+                    <label for="file_type">file type:</label>
+                    <select class="custom-dropdown" id="file_type" name="as_filetype">
+                        <option value="">any format</option>
+                        <option value="pdf">Adobe Acorbat PDF (.pdf)</option>
+                        <option value="ps">Adobe Postscript (.ps)</option>
+                        <option value="dwf">Autodesk DFW (.dwf)</option>
+                        <option value="kml"> Google Earch KML (.kml)</option>
+                        <option value="kmz">Google Earth KMZ (.kmz)</option>
+                        <option value="doc">Microsoft Word (.doc)</option>
+                        <option value="xls">Microsoft Excel (.xls)</option>
+                        <option value="ppt">Microsoft PowerPoint (.ppt)</option>
+                        <option value="rtf">Rich Text Format (.rtf)</option>
+                        <option value="swf">Shockwave Flash (.swf)</option>
+                    </select>
+                    <span class="description">Find pages in the format that you prefer.</span>
+  
+                    <label for="usage_rights">usage rights</label>
+                    <select class="custom-dropdown" id="usage_rights" name="as_rights">
+                        <option value="">not filtered by license</option>
+                        <option value="cc_publicdomain">free to use or share</option>
+                        <option value="cc_attribute">free to use or share, even commercially</option>
+                        <option value="cc_noncommercial">free to use, share or modify</option>
+                        <option value="cc_sharealike">free to use, share or modify, even commercially</option>
+                    </select>
+                    <span class="description">Find pages that you are free to use or share.</span>
+                    
+
+                    <div class="advanced-search-submit-container">
+                        <input class="advanced-search-submit" type="submit" value="Advanced Search">
+                    </div>
+
+                    <div class="advanced-search-black-line"></div>
+
+                    <div class="advanced-search-extra">
+                        <div class="extra-title">You can also</div>
+                        <div class="extra-description">
+                            Find pages that are similar to a URL <br>
+                            Search pages that you've visited <br>
+                            Use operators in the search box <br>
+                            Customise your search settings <br>
+                        </div>    
+                    </div>
                 </form>
             </div>
         </body>

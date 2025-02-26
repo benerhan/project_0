@@ -11,6 +11,13 @@ body {
     padding: 20px;
 }
 
+.advanced-search-black-line {
+    border-bottom: black 1px solid;
+    margin-top: 20px;
+    width: 100%;
+    grid-column: 1 / -1;
+}
+
 /* Main Form Container */
 .advanced-search-form {
     display: grid;
@@ -20,7 +27,7 @@ body {
     margin-left: 0px;
     font-size: 14px;
     line-height: 1.5;
-    color: #666;
+    color: #918d8d;
     align-items: center;
 }
 
@@ -30,11 +37,49 @@ body {
     align-items: center;
 }
 
+/* Dropdown Styling */
+.advanced-search-form select.custom-dropdown {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 0.5px solid #cccccc76;
+    border-radius: 4px;
+    font-size: 10px;
+    font-weight: bold;
+    background-color: transparent;
+    color: rgba(255, 255, 255, 0.715);
+    appearance: none;
+    background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10"%3E%3Cpolygon points="0,0 5,5 10,0" fill="white" /%3E%3C/svg%3E');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    grid-column: 2;
+    grid-row: auto;
+}
+
+/* Option Styling */
+.advanced-search-form select.custom-dropdown option {
+    background-color: transparent;
+    color: rgba(255, 255, 255, 0.715);
+}
+
+/* Custom Arrow */
+.advanced-search-form select.custom-dropdown::after {
+    content: '';
+    position: absolute;
+    right: 10px;
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid #ffffff;
+    transform: translateY(-50%);
+}
+
+
 /* Description Text Under Inputs */
 .advanced-search-form .description {
-    display: flex;
-    align-items: center;
-    grid-column: 3; 
+    display: inline-block;
+    line-height: 1.5; 
     font-size: 12px;
 }
 
@@ -44,6 +89,7 @@ body {
     text-align: left;
     font-weight: normal;
     margin-right: 15px;
+    grid-column: 1;
 }
 
 /* Input Fields */
@@ -60,24 +106,26 @@ body {
 }
 
 /* Submit Button */
-.advanced-search-form input[type="submit"] {
-    grid-column: 2;
+.advanced-search-submit {
     padding: 8px 15px;
     background-color: #7aa7ef;
     border: none;
-    border-radius: 2px;
-    cursor: pointer;
+    border-radius: 1px;
     font-size: 12px;
     font-weight: bold;
-    color: white;
-    margin-top: 20px;
     width: 150px;
     color: black;
-    justify-self: end;
+}
+
+.advanced-search-submit-container {
+    grid-column: 2;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
 }
 
 .advanced-search-form input[type="submit"]:hover {
-    background-color: #357ae8;
+    background-color: #94b3e5;
 }
 
 /* Section Titles */
@@ -112,7 +160,7 @@ body {
 .advanced-search-text {
     color: #e3877e;
     margin-top: 40px;
-    margin-left: 35px;
+    margin-left: 0;
     font-size: 20px;
     font-family: Arial, sans-serif;
     border-bottom: 1px solid black;
@@ -134,6 +182,29 @@ body {
 
 .advanced-search-white-text{
     color: white;
+}
+
+.advanced-search-extra {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.extra-title {
+    font-weight: bold;
+    color: rgb(188, 176, 176);
+    font-size: 14px;
+    margin-bottom: 5px;
+    white-space: nowrap;
+    align-self: flex-start;
+}
+
+.extra-description {
+    font-size: 12px;
+    color: black;
+    line-height: 1.5;
+    align-self: flex-start;
 }
 
 /* Responsive Design for Smaller Screens */
@@ -274,7 +345,7 @@ body {
     background-color: rgb(101, 100, 100);
     color: white;
     width: 100%;
-    height: 30px;
+    height: 45px;
     font-size: 16px;
     padding: 8px 16px 8px 36px;
     border: 1px solid #dfe1e5;
