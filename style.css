@@ -1,3 +1,160 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f1f1f1;
+    padding: 20px;
+}
+
+/* Main Form Container */
+.advanced-search-form {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1.5fr;  /* 3 columns: left text, form, right text */
+    gap: 10px;
+    max-width: 1350px; /* Adjust width as necessary */
+    margin-left: 0px;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #666;
+    align-items: center;
+}
+
+.advanced-search-form div {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+/* Description Text Under Inputs */
+.advanced-search-form .description {
+    display: flex;
+    align-items: center;
+    grid-column: 3; 
+    font-size: 12px;
+}
+
+/* Label Styling */
+.advanced-search-form label {
+    align-self: center;
+    text-align: left;
+    font-weight: normal;
+    margin-right: 15px;
+}
+
+/* Input Fields */
+.advanced-search-form input[type="text"],
+.advanced-search-form input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 0.5px solid #cccccc76;
+    border-radius: 4px;
+    font-size: 14px;
+    background-color: transparent;
+    color: rgba(255, 255, 255, 0.715);
+}
+
+/* Submit Button */
+.advanced-search-form input[type="submit"] {
+    grid-column: 2;
+    padding: 8px 15px;
+    background-color: #7aa7ef;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+    margin-top: 20px;
+    width: 150px;
+    color: black;
+    justify-self: end;
+}
+
+.advanced-search-form input[type="submit"]:hover {
+    background-color: #357ae8;
+}
+
+/* Section Titles */
+.advanced-title-container {
+    display: flex;
+    justify-content: flex-start;
+    /* gap: 15px; */
+    align-items: flex-start;
+    margin-top: 50px;
+    margin-bottom: 50px; 
+}
+
+.advanced-title-left {
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: left;
+    flex: 9.5;
+    margin-right: 20px;
+}
+
+.advanced-title-right {
+    color: white;
+    font-size: 14px;
+    text-align: left;
+    margin-left: 0;
+    flex: 6;
+    /* margin-right: 330px; */
+}
+
+/* Form Instructions at Top */
+.advanced-search-text {
+    color: #e3877e;
+    margin-top: 40px;
+    margin-left: 35px;
+    font-size: 20px;
+    font-family: Arial, sans-serif;
+    border-bottom: 1px solid black;
+    padding-bottom: 25px;
+}
+
+/* Google Logo */
+.advanced-search-google-logo {
+    display: flex;
+    justify-content: left;
+    margin-top: 5px;
+    margin-left: 10px;
+}
+
+.advanced-search-google-logo img {
+    width: 13%;
+    height: auto;
+}
+
+.advanced-search-white-text{
+    color: white;
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    .advanced-search-form {
+        grid-template-columns: 1fr;  /* Stack inputs on smaller screens */
+    }
+
+    .advanced-search-form input[type="submit"] {
+        grid-column: 1 / -1;
+    }
+
+    .advanced-search-text {
+        font-size: 18px;
+    }
+
+    .advanced-title-container {
+        padding: 0 20px;
+    }
+}
+
 body {
     background-color: #202122;
 }

@@ -1,13 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Google Image Search</title>
+        <title>Google Advanced Search</title>
         <link href="style.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     </head>
         <body>
-            
-        </body>
+            <div class="top_links">
+                <a href="index.html">Back to Google Search</a>
+                <a href="google_image.html">Google Image Search</a>
+            </div>
+            <div class="advanced-search-google-logo">
+                <a href="index.html">
+                    <img src="./google_logo.png" alt="Google Logo">
+                </a>
+            </div>
+            <div class="advanced-search-text">
+                Advanced Search
+            </div>
+            <div class="advanced-title-container">
+                    <div class="advanced-title-left">Find pages with...</div>
+                    <div class="advanced-title-right">To do this in the search box</div>
+            </div>
+            <div class="advanced-search-container">
+                  <form class="advanced-search-form" action="https://www.google.com/search">
+                        <label for="all-words">all these words:</label>
+                        <input type="text" id="all-words" name="as_q">
+                        <span class="description">Type the important words:&nbsp;<span class="advanced-search-white-text">  tri-colour rat terrier</span></span>
 
+                        <label for="exact-word">this exact word or phrase:</label>
+                        <input type="text" id="exact-word" name="as_epq">
+                        <span class="description">Put exact words in quotes:&nbsp;<span class="advanced-search-white-text"> "rat terrier"</span></span>
+
+                        <label for="any-words">any of these words:</label>
+                        <input type="text" id="any-words" name="as_oq">
+                        <span class="description">Type &nbsp; <span class="advanced-search-white-text">OR</span>&nbsp; between all the words you want:&nbsp; <span class="advanced-search-white-text">miniature OR standard</span></span>
+
+                        <label for="none-words">none of these words:</label>
+                        <input type="text" id="none-words" name="as_eq">
+                        <span class="description">Put a minus sign just before words that you don't want:<span class="advanced-search-white-text"> -rodent, -"Jack Russell"</span></span>
+
+                        <label for="num-low">numbers raging from:</label>
+                        <div style="display: flex;">
+                            <input type="number" name="as-nlo" id="num-low" style="width: 45%;">
+                            <span style="margin: 0 5px;">to</span>
+                            <input type="number" name="as-nhi" id="num-high" style="width: 55%;">
+                        </div>
+                        <span class="description">Put two full stops between the number and add a unit of measurement:&nbsp;<span class="advanced-search-white-text"> 10..25kg, £300..£500, 2010..2011</span></span>
+                        
+                        <input type="submit" value="Advanced Search">
+                </form>
+            </div>
+        </body>
 </html>
